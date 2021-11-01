@@ -21,5 +21,10 @@ def notify(alert_name):
     return Response(status=201)
 
 
+@app.route('/ping', methods=['GET'])
+def ping():
+    return 'pong', 200
+
+
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run()
